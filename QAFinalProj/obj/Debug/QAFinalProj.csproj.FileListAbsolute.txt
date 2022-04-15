@@ -1,0 +1,9 @@
+C:\repos\QAFinalProj\QAFinalProj\bin\Debug\QAFinalProj.exe.config
+C:\repos\QAFinalProj\QAFinalProj\bin\Debug\QAFinalProj.exe
+C:\repos\QAFinalProj\QAFinalProj\bin\Debug\QAFinalProj.pdb
+C:\repos\QAFinalProj\QAFinalProj\bin\Debug\WebDriver.dll
+C:\repos\QAFinalProj\QAFinalProj\obj\Debug\QAFinalProj.csproj.AssemblyReference.cache
+C:\repos\QAFinalProj\QAFinalProj\obj\Debug\QAFinalProj.csproj.CoreCompileInputs.cache
+C:\repos\QAFinalProj\QAFinalProj\obj\Debug\QAFinalProj.csproj.CopyComplete
+C:\repos\QAFinalProj\QAFinalProj\obj\Debug\QAFinalProj.exe
+C:\repos\QAFinalProj\QAFinalProj\obj\Debug\QAFinalProj.pdb

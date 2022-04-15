@@ -18,6 +18,11 @@ namespace QAFinalProj
             Boolean blnTest01;
             blnTest01 = FinalUnitTests.Test1(driver);
             TestResult(blnTest01);
+
+            Console.WriteLine("Test 2:");
+            Boolean blnTest02;
+            blnTest02 = FinalUnitTests.Test2(driver);
+            TestResult(blnTest02);
         }
 
 
