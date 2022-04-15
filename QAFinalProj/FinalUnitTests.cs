@@ -61,7 +61,162 @@ namespace QAFinalProj
             }
         }
 
+        public static Boolean Test3(IWebDriver driver)
+        {
+            try
+            {
+                fillForm2(driver);
 
+                String isValid = driver.Url;
+
+                if (isValid.Contains("http://47.55.247.242/site5/index.php"))
+                {
+                    return true; ;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public static Boolean Test4(IWebDriver driver)
+        {
+            try
+            {
+                IWebElement lnkNotifs = driver.FindElement(By.LinkText("Moments"));
+                lnkNotifs.Click();
+
+                String isValid = driver.Url;
+
+                if (isValid.Contains("http://47.55.247.242/site5/Notifications.php"))
+                {
+                    return true; ;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public static Boolean Test5(IWebDriver driver)
+        {
+            try
+            {
+                IWebElement dllMessages = driver.FindElement(By.LinkText("Messages"));
+                dllMessages.Click();
+
+                String isValid = driver.Url;
+
+                if (isValid.Contains("http://47.55.247.242/site5/DirectMessage.php"))
+                {
+                    return true; ;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public static Boolean Test6(IWebDriver driver)
+        {
+            try
+            {
+                IWebElement lnkContact = driver.FindElement(By.LinkText("Contact Us"));
+                lnkContact.Click();
+
+                String isValid = driver.Url;
+
+                if (isValid.Contains("http://47.55.247.242/site5/ContactUs.php"))
+                {
+                    return true; ;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public static Boolean Test7(IWebDriver driver)
+        {
+            try
+            {
+                driver.Url = "http://47.55.247.242/site5/index.php";
+
+                IWebElement txtSearch = driver.FindElement(By.Name("criteria"));
+                txtSearch.SendKeys("Test");
+
+                IWebElement btnSearch = driver.FindElement(By.ClassName("btn-outline-success"));
+                btnSearch.Click();
+
+                String isValid = driver.Url;
+
+                if (isValid.Contains("http://47.55.247.242/site5/search.php?criteria=Test"))
+                {
+                    return true; ;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public static Boolean Test8(IWebDriver driver)
+        {
+            try
+            {
+                IWebElement btnHeader = driver.FindElement(By.Id("header_photo"));
+                btnHeader.Click();
+
+                IWebElement btnLogout = driver.FindElement(By.LinkText("Logout"));
+                btnLogout.Click();
+
+                String isValid = driver.Url;
+
+                if (isValid.Contains("http://47.55.247.242/site5/Login.php?message=Successfully%20logged%20out!"))
+                {
+                    return true; ;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            catch
+            {
+                return false;
+            }
+        }
 
         static void fillForm(IWebDriver driver, string fName, string lName, string eMail, string user, string pass, string conFirm, string phone, string address, string province, string postal, string url, string desc, string loc)
         {
@@ -108,6 +263,20 @@ namespace QAFinalProj
 
             IWebElement txtLocation = driver.FindElement(By.Id("location"));
             txtLocation.SendKeys(loc);
+
+            IWebElement btnSend = driver.FindElement(By.Id("button"));
+            btnSend.Click();
+        }
+
+        static void fillForm2(IWebDriver driver)
+        {
+            driver.Url = "http://47.55.247.242/site5/login.php";
+
+            IWebElement txtUserName = driver.FindElement(By.Id("username"));
+            txtUserName.SendKeys("Bob");
+
+            IWebElement txtPassWord = driver.FindElement(By.Id("password"));
+            txtPassWord.SendKeys("hackme");
 
             IWebElement btnSend = driver.FindElement(By.Id("button"));
             btnSend.Click();
